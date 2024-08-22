@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E4AB0346-B2A4-482F-A5EF-4D6C2334AC39}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Tutorial_5_8_Coin_Toss</RootNamespace>
+    <AssemblyName>Tutorial 5-8 Coin Toss</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Coin.cs" />
+    <Compile Include="CoinFlipOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoinFlipOptions.Designer.cs">
+      <DependentUpon>CoinFlipOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoinFlipGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoinFlipGame.Designer.cs">
+      <DependentUpon>CoinFlipGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoinTossResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoinTossResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.cs" />
+    <Compile Include="HighScoreSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HighScoreSheet.Designer.cs">
+      <DependentUpon>HighScoreSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoneyCounter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoneyCounter.Designer.cs">
+      <DependentUpon>MoneyCounter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ToolTip.cs" />
+    <Compile Include="Tutorial_5_8_Coin_Toss\Resources.cs" />
+    <EmbeddedResource Include="CoinFlipOptions.resx">
+      <DependentUpon>CoinFlipOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoinFlipGame.resx">
+      <DependentUpon>CoinFlipGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoinTossResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CoinTossResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HighScoreSheet.resx">
+      <DependentUpon>HighScoreSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoneyCounter.resx">
+      <DependentUpon>MoneyCounter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Heads.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tails.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tails.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penny Heads.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penny Tails.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nickel Heads.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nickel Tails.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dime Heads.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dime Tails.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quarter Heads.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quarter Tails.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trollface.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\High Scores.txt" />
+    <Content Include="Icon1.ico" />
+    <None Include="Resources\TitleAnimation.gif" />
+    <None Include="Resources\Title2.png" />
+    <None Include="Resources\Title.png" />
+    <None Include="Resources\Success.wav" />
+    <None Include="Resources\CloseForm.wav" />
+    <None Include="Resources\CoinFlip2.wav" />
+    <None Include="Resources\CoinFlip1.wav" />
+    <Content Include="Resources\ErrorMessage.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\GameClose.wav" />
+    <None Include="Resources\GameOpen.wav" />
+    <Content Include="Resources\JumpScareSound.wav" />
+    <None Include="Resources\MenuClose.wav" />
+    <None Include="Resources\MenuOpen.wav" />
+    <Content Include="Resources\OpenForm.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
